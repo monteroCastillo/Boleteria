@@ -7,7 +7,7 @@
                 <h2>Listado Publicadores</h2>
 
                     <b-button size= "sm" :to="{name: 'NuevoPublicador'}" variant="Primary">
-                    Nuevo Publicadores
+                    
                     </b-button>
                     <div class = "col-md-12">
                     <b-table striped hover :items="publi" :fields="fields">
@@ -47,8 +47,8 @@ export default{
         return{
             fields:[
                 {key: 'nombre_Razonsocial', label: 'nombre'},
-                {key: 'nitCedula', label: 'nit'},
-                {key: 'action', label: 'act'}
+                {key: 'nitCedula', label: 'Nit'},
+                {key: 'action', label: 'Accion'}
                 
             ],
             publi: [],
