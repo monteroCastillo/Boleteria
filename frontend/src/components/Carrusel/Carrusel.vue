@@ -4,11 +4,11 @@
     <b-carousel
       id="carousel-1"
       v-model="slide"
-      :interval="4000"
+      :interval="3000"
       controls
       indicators
       background="#ababab"
-      img-width="1024"
+      img-width="480"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
@@ -18,6 +18,8 @@
       <b-carousel-slide
         caption="First slide"
         text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        img-width="480"
+        img-height="480"
         img-src="https://picsum.photos/1024/480/?image=52"
       ></b-carousel-slide>
 
@@ -28,9 +30,24 @@
 
       <b-carousel-slide>
       <b-card slot="img" alt="img slot" img-blank img-alt="Card image">
-        <img src="../../img/imagen.png" />
+        
+        <img 
+          width="480"
+          height="240"
+          src="../../img/imagen.png" />
       </b-card>
       </b-carousel-slide>
+
+      <b-carousel-slide>
+      <b-card slot="img" alt="img slot" img-blank img-alt="Card image">
+        
+        <img 
+          width="480"
+          height="240"
+          src="../../img/Soda-Stereo.jpg" />
+      </b-card>
+      </b-carousel-slide>
+
 
      
 
@@ -40,8 +57,9 @@
         <template v-slot:img>
           <img
             class="d-block img-fluid w-100"
-            width="1024"
+            width="480"
             height="480"
+            
             src="https://picsum.photos/1024/480/?image=55"
             alt="image slot"
           >
@@ -50,6 +68,9 @@
 
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
       <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+        class="d-block img-fluid w-100"
+            width="480"
+            height="480"
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
           a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.

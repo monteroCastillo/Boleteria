@@ -7,3 +7,8 @@ class PublicadorSerializer(serializers.ModelSerializer):
         fields = '__all__'
         # model = Publicador
         # fields = ('usuario','clave') 
+
+class PublicadorSerializer2(serializers.ModelSerializer):
+    class Meta:        
+        model = Publicador
+        fields = ('usuario','clave','correoElectronico') 

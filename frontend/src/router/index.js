@@ -8,6 +8,10 @@ import listaPublicadores from '@/components/Publicador/listaPublicadores'
 import EliminarPublicador from '@/components/Publicador/EliminarPublicador'
 import NuevoPublicador from '@/components/Publicador/NuevoPublicador'
 import Login from '@/components/Login'
+import login2 from '@/components/Login/login2'
+import Counter from '@/components/Counter'
+import Navbar from '@/components/Navbar/Navbar'
+
 Vue.use(Router)
 
 export default new Router({
@@ -48,6 +52,28 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/login2',
+      name: 'login2',
+      component: login2
+    },
+
+    {
+      path: '/Counter',
+      name: 'Counter',
+      component: Counter
+    },
+
+    {
+      path: '/Navbar',
+      name: 'Navbar',
+      component: Navbar
+    },
+    {
+      path:'/fotos',
+      name:'fotos',
+      component: () => import(/*webpackChunkName:"fotos" */'@/views/Fotos.vue')
     },
    
 

@@ -13,20 +13,23 @@
                   <form @submit = "onSubmit">
                 
                           <div class="form-group">
-                              <b-col md="6">
+                              <b-col md="12">
                               <input v-model='usuarioX.usuario' type="text" id= "usuario" placeholder="Nombre del usuario"
                               class= "form-control">
                               </b-col>
                           </div>
                           <div class="form-group">
-                              <b-col md="6">
+                              <b-col md="12">
                               <input v-model='usuarioX.clave' type="text"  id="clave"
                               placeholder="Digite contraseña" class="form-control">
                               </b-col>
                           </div>  
-                          <div style="text-align: right;width:220px">
-                          <button v-on:click.prevent= "entrar" > Entrar
-                              </button> 
+                           <div class="form-group">
+                              <b-col md="12" >
+                                  <button style="float: right" v-on:click.prevent= "entrar" > Entrar
+                                  </button> 
+                              </b-col>
+                             
                           </div>
                           <br>
                           <br>
