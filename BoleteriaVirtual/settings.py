@@ -39,6 +39,7 @@ CORS_ORIGIN_WHITELIS = (
 
 INSTALLED_APPS = [
     'registration',
+    'evento.apps.EventoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'publicador',
+    
     'rest_framework',    
     'rest_framework.authtoken',
     'corsheaders'
@@ -76,6 +78,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'BoleteriaVirtual.urls'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 TEMPLATES = [
     {

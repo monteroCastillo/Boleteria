@@ -11,7 +11,7 @@ import Login from '@/components/Login'
 import login2 from '@/components/Login/login2'
 import Counter from '@/components/Counter'
 import Navbar from '@/components/Navbar/Navbar'
-
+import prueba from '@/components/Prueba/prueba'
 Vue.use(Router)
 
 export default new Router({
@@ -25,18 +25,17 @@ export default new Router({
       path: '/carrusel',
       name: 'Carrusel',
       component: Carrusel
-    },
-    {
-      path: '/:publicadorId/editarPublicador',
-      name: 'EditarPublicador',
-      component: EditarPublicadores
-    },
+    },    
     {
       path: '/publi',
       name: 'publicadores',
       component: listaPublicadores
-    },  
-
+    }, 
+    {
+      path: '/:publicadorId/editarPublicador',
+      name: 'EditarPublicador',
+      component: EditarPublicadores
+    }, 
     {
       path: '/:publicadorId/delete',
       name: 'EliminarPublicador',
@@ -69,13 +68,37 @@ export default new Router({
       path: '/Navbar',
       name: 'Navbar',
       component: Navbar
+    },    
+    {
+      path:'/cards',
+      name:'prueba',
+      component: () => import(/*webpackChunkName:"fotos" */'@/components/Prueba/prueba')
     },
     {
-      path:'/fotos',
-      name:'fotos',
-      component: () => import(/*webpackChunkName:"fotos" */'@/views/Fotos.vue')
+      path:'/footer',
+      name:'footer',
+      component: () => import(/*webpackChunkName:"footer" */'@/components/Footer/footer')
     },
-   
+    {
+      path:'/listaEventos',
+      name:'listaEventos',
+      component: () => import(/*webpackChunkName:"listaEventos" */'@/components/Evento/listaEventos')
+    },
+    {
+      path:'/crearEvento',
+      name:'crearEvento',
+      component: () => import(/*webpackChunkName:"crearEvento" */'@/components/Evento/crearEvento')
+    },
+    {
+      path:'/:eventoId/editarEvento',
+      name:'editarEVENTO',
+      component: () => import(/*webpackChunkName:"editarEVENTO" */'@/components/Evento/editarEvento')
+    },
+    {
+      path:'/:eventoId/eliminarEvento',
+      name:'eliminarEVENTO',
+      component: () => import(/*webpackChunkName:"eliminarEVENTO" */'@/components/Evento/eliminarEvento')
+    },
 
   ],
   mode:'history'

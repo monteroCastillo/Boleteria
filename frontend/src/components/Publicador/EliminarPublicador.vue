@@ -26,14 +26,7 @@
             </div>
 
         </div>
-
-
-    </div>
-   
-
-    
-   
-    
+    </div>  
 
 </template>
 
@@ -88,11 +81,11 @@ export default {
 
             axios.delete(path).then((response) =>{
                 location.href = '/publi'
-                
+                swal("Publicador Eliminado exitosamente!!", "", "success") 
                 
             })
             .catch((error) => {
-                swal("No es posible eliminar el libro", "", "error")
+                swal("No es posible eliminar el Publicador", "", "error")
             })
 
 

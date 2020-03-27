@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div class="col-md-12">>
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -8,35 +8,36 @@
       controls
       indicators
       background="#ababab"
-      img-width="480"
+      img-width="840"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
       <!-- Text slides with image -->
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-width="480"
-        img-height="480"
-        img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-
       <b-carousel-slide>
       <b-card slot="img" alt="img slot" img-blank img-alt="Card image">
         
         <img 
           width="480"
           height="240"
-          src="../../img/imagen.png" />
+          src="../../img/ramones.jpg" />
       </b-card>
       </b-carousel-slide>
+
+      <!-- Slides with custom text -->      
+        
+      <b-carousel-slide>
+      <b-card slot="img" alt="img slot" img-blank img-alt="Card image">
+        
+        <img 
+          width="480"
+          height="240"
+          src="../../img/ub40.jpeg" />
+      </b-card>
+      </b-carousel-slide>
+
+      <!-- Slides with custom text -->     
 
       <b-carousel-slide>
       <b-card slot="img" alt="img slot" img-blank img-alt="Card image">
@@ -46,36 +47,32 @@
           height="240"
           src="../../img/Soda-Stereo.jpg" />
       </b-card>
-      </b-carousel-slide>
-
-
-     
+      </b-carousel-slide>     
 
       <!-- Slides with img slot -->
       <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
       <b-carousel-slide>
-        <template v-slot:img>
-          <img
-            class="d-block img-fluid w-100"
-            width="480"
-            height="480"
-            
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template>
+      <b-card slot="img" alt="img slot" img-blank img-alt="Card image">
+        
+        <img 
+          width="480"
+          height="240"
+          src="../../img/hendrix.jpg" />
+      </b-card>
       </b-carousel-slide>
 
+
       <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        class="d-block img-fluid w-100"
-            width="480"
-            height="480"
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
+     <b-carousel-slide>
+      <b-card slot="img" alt="img slot" img-blank img-alt="Card image">
+        
+        <img 
+          width="480"
+          height="240"
+          src="../../img/theDoors.jpg" />
+      </b-card>
       </b-carousel-slide>
+
     </b-carousel>
 
     <p class="mt-4">
@@ -97,10 +94,22 @@
     methods: {
       onSlideStart(slide) {
         this.sliding = true
-      },
+      },    
       onSlideEnd(slide) {
         this.sliding = false
       }
     }
   }
 </script>
+
+<style scoped>
+/*
+.carousel, .carousel-inner > .item > img {
+  /*height: 50px;
+  width:100%;
+  height:480px;
+  background-position: center;
+}
+*/
+</style>
+

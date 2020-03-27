@@ -10,6 +10,7 @@
           <b-navbar-nav>
             <b-nav-item :to="{name: 'Carrusel'}" exact>Home</b-nav-item>
             <b-nav-item :to="{name: 'Login'}">login</b-nav-item>
+            <b-nav-item :to="{name: 'NuevoPublicador'}">Publique su evento</b-nav-item>
           </b-navbar-nav>
 
           <!-- Right aligned nav items -->
